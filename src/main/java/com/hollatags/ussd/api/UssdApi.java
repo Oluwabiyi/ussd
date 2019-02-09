@@ -25,9 +25,8 @@ public class UssdApi {
     @Path("send")
     @POST
     public Response sendUssd(Message message){
-        return Response.ok(appEventListener.getConnection()
-                .sendUssd(message.getSender(), message.getReceiver(),
-                        message.getMessage(),message.getType()))
+        appEventListener.getConnection().sendUssd(message.getSender(), message.getReceiver(), message.getMessage(), message.getType());
+        return Response.ok("Ok")
                 .build();
     }
 }
