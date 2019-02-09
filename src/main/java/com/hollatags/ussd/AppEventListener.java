@@ -17,7 +17,7 @@ public class AppEventListener {
     @PostConstruct
     public void onInit(){
         System.out.println("Starting app");
-        session = new Session("Glo.Bind", "Glo.Bind", "system id","password", null, SmppBindType.TRANSCEIVER, "41.203.65.15", 2101);
+        session = new Session("Glo.Bind", "Glo.Bind", "holat","holat2", null, SmppBindType.TRANSCEIVER, "41.203.65.15", 2101);
         session.setSmsReceiver(new Session.SmsListener() {
             @Override
             public void onMessage(String sender, String receiver, String message) {
